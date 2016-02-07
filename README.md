@@ -6,6 +6,8 @@ Firstly, go to test resources folder and paste there file should be tested.
 
 Secondly, go to SpecsSetup object and insert your file name into yourFileName constant.
 
+However, you can use my file as model. Just run and enjoy!
+
 After these steps, run command 'test' using sbt terminal or through your IDE, it's up to you!
 
 I decided by:
