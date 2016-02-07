@@ -11,11 +11,9 @@ class MarsSpec extends Specification with ScalaCheck {
 
   "Mars" should {
 
-    val lines = FileReader readFrom SpecsSetup.myTest
-
     " Executing the mission: real test in mars land (You're going to see the output results above test results)" in {
 
-      val rovers = Mars.executeMission(SpecsSetup.myTest)
+      val rovers = Mars executeMission SpecsSetup.realTestFile
       println("------------------------------------------------------------------")
       println("Output:")
       rovers.foreach( rover => println(s"--> ${rover.output}") )
