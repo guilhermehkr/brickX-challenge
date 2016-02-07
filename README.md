@@ -12,7 +12,7 @@ I decided by:
 
 - While file is reading, some validation are done and if there is something wrong in the rover entry, this rover will be marked as invalid and won't
 be processed
-- When it founds at least one wrong command ( something not like Left, Right and Movement ), this rover will be marked as invalid
+- When it is found at least one wrong command ( something not like Left, Right and Movement ), this rover will be marked as invalid
 - When rovers goes out of plateau, it will be marked as invalid
 
 ### Why did I do like this? I don't know, I thought it reasonable!
