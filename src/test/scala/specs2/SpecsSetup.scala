@@ -7,6 +7,6 @@ object SpecsSetup {
   private val myTestFileName = "rovers-entries"
   def myTest = s"/$myTestFileName"
 
-  private val yourFileName = "your-file-will-be-processed"
+  private val yourFileName = "rovers-entries"
   def realTestFile = s"/$yourFileName"
 }
