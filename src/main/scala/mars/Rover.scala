@@ -15,11 +15,8 @@ case class Rover(coordinate: Coordinate, currentDirection: Compass, commands: Li
       rover.copy(status = Nok, output = "There is one invalid command at least, impossible to proceed")
     } else if (rover.coordinate.x > plateau.boundX || rover.coordinate.y > plateau.boundY) {
       rover.copy(status = Nok, output = "The rover is outside of plateau upper-right")
-    } else if ((rover.currentDirection == South || rover.currentDirection == West)
-                && (rover.coordinate.x < 0 || rover.coordinate.y < 0)) {
+    } else if (rover.coordinate.x < 0 || rover.coordinate.y < 0) {
       rover.copy(status = Nok, output = "The rover is outside of plateau bottom-left")
-    } else if(rover.coordinate.x < 0 || rover.coordinate.y < 0) {
-      rover.copy(status = Nok, output = "It is not accepted negative coordinates")
     } else {
       rover
     }

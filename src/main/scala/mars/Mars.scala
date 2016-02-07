@@ -9,8 +9,8 @@ object Mars {
     val lines = FileReader readFrom path
     val plateau = Plateau( lines )
 
-    val entriesGruoped = lines.removeFirst().grouped(2)
+    val entriesGrouped = lines.removeFirst().grouped(2)
 
-    Executor.play( plateau, Rover(entriesGruoped) )
+    Executor.play( plateau, Rover(entriesGrouped) )
   }
 }

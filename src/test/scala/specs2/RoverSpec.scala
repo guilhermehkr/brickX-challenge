@@ -43,9 +43,11 @@ class RoverSpec extends Specification with ScalaCheck {
       val rovers = lines.removeFirst().grouped(2)
       val checkedRovers = Rover(rovers).map(_.validate(plateau))
 
-      checkedRovers foreach println
-
       checkedRovers must not be empty
+      checkedRovers.exists(_.status == Nok) must be equalTo true
+      checkedRovers.exists(_.status == Ok) must be equalTo true
+      checkedRovers.count(_.status == Ok) must be equalTo 5
+      checkedRovers.count(_.status == Nok) must be equalTo 1
     }
   }
 }
